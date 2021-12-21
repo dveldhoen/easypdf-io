@@ -181,4 +181,3 @@ function base64toBlob (base64Data, contentType) {
         type: contentType
     });
 }
-
