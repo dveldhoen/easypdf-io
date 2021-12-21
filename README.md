@@ -1,5 +1,7 @@
 <h1 align="center">Easy PDF</h1>
 
+
+
 <p align="center">
 If this package helped you out please star us on Github!
 <br/>
@@ -8,6 +10,10 @@ Much appreciated!
 <br/>
 <a href="https://github.com/dveldhoen/easy-pdf/"><img src="https://img.shields.io/github/stars/dveldhoen/easy-pdf.svg?style=social&label=Star" alt="Pull Request's Welcome"></a>
 </p>
+
+# Important! 
+This package is under development and is being finalized. It will start working in the coming days.  
+If you try to use it before then, it will not work.
 
 ## Installing
 
@@ -26,7 +32,6 @@ $ yarn add easy-pdf
 Using unkpg CDN:
 
 ```html
-
 <script src="https://unpkg.com/easy-pdf/dist/easy-pdf.min.js"></script>
 ```
 
@@ -35,7 +40,6 @@ Using unkpg CDN:
 Html
 
 ```html
-
 <script src="https://unpkg.com/easy-pdf/dist/easy-pdf.min.js"></script>
 ```
 
