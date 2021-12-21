@@ -22,13 +22,13 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run lint
-      - run: npm run test:coverage
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/clover.xml
-          flags: unittests
-          fail_ci_if_error: true
+#      - run: npm run test:coverage
+#      - uses: codecov/codecov-action@v1
+#        with:
+#          token: ${{ secrets.CODECOV_TOKEN }}
+#          file: ./coverage/clover.xml
+#          flags: unittests
+#          fail_ci_if_error: true
 
   bump-version:
     needs: lint-test
