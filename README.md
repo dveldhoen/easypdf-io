@@ -1,5 +1,6 @@
 <h1 align="center">Easy PDF</h1>
-
+<h4 align="center">Build for Web and Backend 💪</h4>
+<br/>
 
 
 <p align="center">
@@ -59,7 +60,7 @@ import pdf from 'easypdf-io';
 
 ```shell
 # HTTPS POST 
-https://api.pdf.io/v2/free/pdf
+https://api.easypdf.io/v2/free/pdf
 
 # POST Data
 Format: JSON
@@ -115,7 +116,7 @@ Supported file types:
 
 ```js
 const data = {
-    background: "https://public.pdf.io/img/watermark_draft.jpg"
+    background: "https://public.easypdf.io/img/watermark_draft.jpg"
 };
 ```
 
