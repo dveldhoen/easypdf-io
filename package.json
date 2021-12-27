@@ -14,8 +14,7 @@
     "package": "npm run lint && npm run build && git add -A dist",
     "lint": "eslint index.js --fix",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:unit": ""
+    "test:coverage": "jest --coverage"
   },
   "main": "./dist/easypdf-io.min.js",
   "types": "./index.d.ts",
