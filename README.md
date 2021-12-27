@@ -12,6 +12,10 @@ Much appreciated!
 <a href="https://github.com/dveldhoen/easypdf-io/"><img src="https://img.shields.io/github/stars/dveldhoen/easypdf-io.svg?style=social&label=Star" alt="Pull Request's Welcome"></a>
 </p>
 
+## Demo
+
+[JS Fiddle: Plain Javascript](https://jsfiddle.net/easyinvoice/0semw5cn/)
+
 ## Installing
 
 Using npm:
