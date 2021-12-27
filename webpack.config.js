@@ -10,7 +10,7 @@ function generateConfig(name) {
         output: {
             filename: [name] + '.js',
             sourceMapFilename: [name] + '.map',
-            library: 'easypdf-io',
+            library: 'easypdf',
             libraryTarget: 'umd',
             globalObject: 'this'
         },
