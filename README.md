@@ -79,7 +79,7 @@ var html = '<p>Hello world!</p>';
 var data = {
     // btoa === base64 encode
     html: btoa(html), // Must be base64 encoded html. This example contains 'Hello World!' in base64
-    background: "https://public.easypdf-io.io/img/watermark-draft.jpg",
+    background: "https://public.easypdf.io/img/watermark-draft.jpg",
     settings: {
         // "margin-top": 25, // Default to 25
         // "margin-right": 25, // Default to 25
