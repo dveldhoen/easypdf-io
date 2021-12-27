@@ -10,7 +10,7 @@ function generateConfig(name) {
         output: {
             filename: [name] + '.js',
             sourceMapFilename: [name] + '.map',
-            library: 'easypdf',
+            library: 'easypdf-io',
             libraryTarget: 'umd',
             globalObject: 'this'
         },
@@ -42,7 +42,7 @@ function generateConfig(name) {
     return config;
 }
 
-['easypdf.min'].forEach(function (key) {
+['easypdf-io.min'].forEach(function (key) {
     config.push(generateConfig(key));
 });
 

@@ -1,5 +1,5 @@
 {
-  "name": "easy-pdf",
+  "name": "easypdf-io",
   "version": "1.0.2",
   "description": "Easily create beautiful pdf documents.",
   "license": "MIT",
@@ -16,14 +16,14 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "main": "./dist/easypdf.min.js",
+  "main": "./dist/easypdf-io.min.js",
   "types": "./index.d.ts",
   "bugs": {
-    "url": "https://github.com/dveldhoen/easy-pdf/issues"
+    "url": "https://github.com/dveldhoen/easypdf-io/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dveldhoen/easy-pdf.git"
+    "url": "https://github.com/dveldhoen/easypdf-io.git"
   },
   "keywords": [
     "create",

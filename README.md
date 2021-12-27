@@ -8,31 +8,31 @@ If this package helped you out please star us on Github!
 Much appreciated!
 <br/>
 <br/>
-<a href="https://github.com/dveldhoen/easy-pdf/"><img src="https://img.shields.io/github/stars/dveldhoen/easy-pdf.svg?style=social&label=Star" alt="Pull Request's Welcome"></a>
+<a href="https://github.com/dveldhoen/easypdf-io/"><img src="https://img.shields.io/github/stars/dveldhoen/easypdf-io.svg?style=social&label=Star" alt="Pull Request's Welcome"></a>
 </p>
 
 # Important! 
 This package is under development and is being finalized. It will start working in the coming days.  
-If you try to use it before then, it will not work.
+If you try to use it before then, <b>it will not work</b>.
 
 ## Installing
 
 Using npm:
 
 ```bash
-$ npm install easy-pdf --save
+$ npm install easypdf-io --save
 ```
 
 Using yarn:
 
 ```bash
-$ yarn add easy-pdf
+$ yarn add easypdf-io
 ```
 
 Using unkpg CDN:
 
 ```html
-<script src="https://unpkg.com/easy-pdf/dist/easy-pdf.min.js"></script>
+<script src="https://unpkg.com/easypdf-io/dist/easypdf-io.min.js"></script>
 ```
 
 ## Import
@@ -40,26 +40,26 @@ Using unkpg CDN:
 Html
 
 ```html
-<script src="https://unpkg.com/easy-pdf/dist/easy-pdf.min.js"></script>
+<script src="https://unpkg.com/easypdf-io/dist/easypdf-io.min.js"></script>
 ```
 
 CommonJS
 
 ```js
-var easyPdf = require('easy-pdf');
+var pdf = require('easypdf-io');
 ```
 
 ES6
 
 ```js
-import easyPdf from 'easy-pdf';
+import pdf from 'easypdf-io';
 ```
 
 ## Direct REST API access
 
 ```shell
 # HTTPS POST 
-https://api.easypdf.io/v2/free/pdf
+https://api.pdf.io/v2/free/pdf
 
 # POST Data
 Format: JSON
@@ -70,7 +70,7 @@ Structure: {"data":{"html":""}} # Parent object must be 'data'
 
 ```js
 //Import the library into your project
-var easyPdf = require('easy-pdf');
+var pdf = require('easypdf-io');
 
 // Prepare your PDF content using HTML
 var html = '<p>Hello world!</p>';
@@ -78,7 +78,7 @@ var html = '<p>Hello world!</p>';
 var data = {
     // btoa === base64 encode
     html: btoa(html), // Must be base64 encoded html. This example contains 'Hello World!' in base64
-    background: "https://public.easy-pdf.io/img/watermark-draft.jpg",
+    background: "https://public.easypdf-io.io/img/watermark-draft.jpg",
     settings: {
         // "margin-top": 25, // Default to 25
         // "margin-right": 25, // Default to 25
@@ -89,7 +89,7 @@ var data = {
 };
 
 //Create your PDF! Easy!
-easyPdf.create(data, function (result) {
+pdf.create(data, function (result) {
     // The response will contain a base64 encoded PDF file
     // Using the below line we can decode the base64 and store the file locally
     fs.writeFileSync("sample.pdf", result.pdf, 'base64');
@@ -115,7 +115,7 @@ Supported file types:
 
 ```js
 const data = {
-    background: "https://public.easypdf.io/img/watermark_draft.jpg"
+    background: "https://public.pdf.io/img/watermark_draft.jpg"
 };
 ```
 
@@ -134,6 +134,7 @@ const data = {
 ```js
 //Import fs to be able to read from the local file system
 var fs = require("fs");
+var pdf = require('easypdf-io');
 
 //Use the code below to read your local file as a base64 string
 const data = {
@@ -147,9 +148,10 @@ const data = {
 
 ```js
 var fs = require('fs');
+var pdf = require('easypdf-io');
 
 var html = btoa('<p>Hello world!</p>');
-const result = await easyPdf.create({html});
+const result = await pdf.create({html});
 await fs.writeFileSync("sample.pdf", result.pdf, 'base64');
 ```
 
@@ -158,24 +160,28 @@ await fs.writeFileSync("sample.pdf", result.pdf, 'base64');
 Using callback
 
 ```js
+var pdf = require('easypdf-io');
+
 var html = btoa('<p>Hello world!</p>');
-easyPdf.create({html}, function (result) {
-    easyPdf.download('sample.pdf', result.pdf);
+pdf.create({html}, function (result) {
+    pdf.download('sample.pdf', result.pdf);
     //	you can download like this as well:
-    //	easyPdf.download();
-    //	easyPdf.download('sample.pdf');   
+    //	pdf.download();
+    //	pdf.download('sample.pdf');   
 });
 ```
 
 Using async/await
 
 ```js
+var pdf = require('easypdf-io');
+
 var html = btoa('<p>Hello world!</p>');
-const result = await easyPdf.create({html});
-easyPdf.download('sample.pdf', result.pdf);
+const result = await pdf.create({html});
+pdf.download('sample.pdf', result.pdf);
 //	you can download like this as well:
-//	easyPdf.download();
-//	easyPdf.download('sample.pdf');
+//	pdf.download();
+//	pdf.download('sample.pdf');
 ```
 
 ### Render(view) your PDF (browser only)
@@ -212,8 +218,8 @@ js: Using Callback
 ```js
 var html = btoa('<p>Hello world!</p>');
 var elementId = 'pdf';
-easyPdf.create({html}, function (result) {
-    easyPdf.render(elementId, result.pdf, function () {
+pdf.create({html}, function (result) {
+    pdf.render(elementId, result.pdf, function () {
         console.log('PDF rendered!');
     });
 });
@@ -224,12 +230,7 @@ js: Using async/await
 ```js
 var html = btoa('<p>Hello world!</p>');
 const elementId = 'pdf';
-const result = await easyPdf.create({html});
-await easyPdf.render(elementId, result.pdf);
+const result = await pdf.create({html});
+await pdf.render(elementId, result.pdf);
 ```
-
-You could view your base64 pdf through the following website:
-https://base64.guru/converter/decode/pdf
-
-Paste the base64 string and click 'Decode Base64 to PDF'.
 

@@ -42,7 +42,7 @@ jobs:
       - run: git config --global user.email "info@easypdf.io"
       - run: git config --global user.name "Danny Veldhoen"
       - run: npm version patch
-      - run: git push https://${{secrets.GPR_TOKEN}}@github.com/dveldhoen/easy-pdf
+      - run: git push https://${{secrets.GPR_TOKEN}}@github.com/dveldhoen/easypdf-io
 
 
   #   build:
