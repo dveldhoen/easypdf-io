@@ -2,14 +2,14 @@ var easyPdf = require('../index.js');
 var fs = require("fs");
 
 test('return value is base64', callback => {
-    easyPdf.create({}, function (result) {
+    easyPdf.create({html: ""}, function (result) {
         expect(isBase64(result.pdf)).toBe(true);
         callback();
     });
 });
 
 test('if pdf file is stored locally', async () => {
-    const data = {};
+    const data = {html: ""};
     const result = await easyPdf.create(data);
     await fs.writeFileSync("sample.pdf", result.pdf, 'base64');
     expect(fs.existsSync("sample.pdf")).toBe(true);
