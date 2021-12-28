@@ -1,7 +1,15 @@
 <h1 align="center">Easy PDF</h1>
-<h4 align="center">Build for Web and Backend 💪</h4>
+<p align="center" style="font-size: 16px">Build for Web and Backend 💪</p>
 <br/>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/easypdf-io"><img src="https://img.shields.io/npm/v/easypdf-io.svg" alt="Version"></a>
+  <a href="https://github.com/dveldhoen/easypdf-io/actions?query=branch%3Amaster"><img src="https://github.com/dveldhoen/easypdf-io/workflows/build/badge.svg" alt="Build Status"></a>    
+  <a href="https://npmcharts.com/compare/easypdf-io?minimal=true"><img src="https://img.shields.io/npm/dm/easypdf-io.svg" alt="Downloads"></a>
+    <br/>
+  <a href="https://www.npmjs.com/package/easypdf-io"><img src="https://img.shields.io/npm/l/easypdf-io.svg" alt="License"></a>
+  <a href="https://github.com/dveldhoen/easypdf-io"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="Pull Request's Welcome"></a>
+</p>
 
 <p align="center">
 If this package helped you out please star us on Github!
